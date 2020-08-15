@@ -543,10 +543,10 @@ async function slackdown(slackToken) {
       })
     }
   }))
-  
+
   const now = new Date()
   const month = now.getMonth() + 1
-  const fileDateName = `${now.getFullYear()}-${month > 9 ? month : '0' + month}-${now.getDate()}.md`
+  const fileDateName = `digest/${now.getFullYear()}-${month > 9 ? month : '0' + month}-${now.getDate()}.md`
   fs.writeFile(fileDateName, markdown.join('\n'))
   console.log('markdown=', markdown.join('\n'))
 }
