@@ -441,10 +441,6 @@ module.exports = {
 /***/ (function(module, __unusedexports, __webpack_require__) {
 
 
-
-
-
-
 const emoji = __webpack_require__(86)
 const { WebClient } = __webpack_require__(114)
 const fs = __webpack_require__(226)
@@ -526,7 +522,7 @@ async function slackdown(slackToken) {
         throw new Error('Missing slackToken')
     }
 
-    slackClient = new WebClient(process.env.SLACK_TOKEN)
+    slackClient = new WebClient(slackToken)
 
   const users = await getUsers()
 
