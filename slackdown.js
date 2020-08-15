@@ -1,8 +1,4 @@
 
-
-
-
-
 const emoji = require('node-emoji')
 const { WebClient } = require('@slack/web-api')
 const fs = require('fs-extra')
@@ -84,7 +80,7 @@ async function slackdown(slackToken) {
         throw new Error('Missing slackToken')
     }
 
-    slackClient = new WebClient(process.env.SLACK_TOKEN)
+    slackClient = new WebClient(slackToken)
 
   const users = await getUsers()
 
