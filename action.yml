@@ -1,10 +1,8 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'slackdown'
+description: 'fetches all public slack channels and renders their messages to markdown file'
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
-    required: true
-    default: '1000'
+  slack-token: 
+    default: "boo m boom"
 outputs:
   time: # output will be available to future steps
     description: 'The message to output'

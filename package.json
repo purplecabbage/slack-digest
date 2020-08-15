@@ -1,7 +1,7 @@
 {
-  "name": "javascript-action",
-  "version": "1.0.0",
-  "description": "JavaScript Action Template",
+  "name": "slack-digest",
+  "version": "0.1.0",
+  "description": "js action to consume a day's worth of slack messages and store them as markdown",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
@@ -11,21 +11,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/javascript-action.git"
+    "url": "git+https://github.com/purplecabbage/slack-digest.git"
   },
   "keywords": [
     "GitHub",
     "Actions",
     "JavaScript"
   ],
-  "author": "",
+  "author": "@purplecabbage",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/actions/javascript-action/issues"
+    "url": "https://github.com/purplecabbage/slack-digest/issues"
   },
-  "homepage": "https://github.com/actions/javascript-action#readme",
+  "homepage": "https://github.com/purplecabbage/slack-digest#readme",
   "dependencies": {
-    "@actions/core": "^1.1.1"
+    "@actions/core": "^1.1.1",
+    "@slack/web-api": "^5.10.0",
+    "fs-extra": "^9.0.1",
+    "node-emoji": "^1.10.0"
   },
   "devDependencies": {
     "@zeit/ncc": "^0.22.3",

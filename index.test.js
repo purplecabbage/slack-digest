@@ -1,18 +1,10 @@
-const wait = require('./wait');
 const process = require('process');
 const cp = require('child_process');
 const path = require('path');
+const slackdown = require('./slackdown')
 
-test('throws invalid number', async () => {
-  await expect(wait('foo')).rejects.toThrow('milliseconds not a number');
-});
-
-test('wait 500 ms', async () => {
-  const start = new Date();
-  await wait(500);
-  const end = new Date();
-  var delta = Math.abs(end - start);
-  expect(delta).toBeGreaterThan(450);
+test('throws if missing slack-token', async () => {
+  await expect(slackdown()).rejects.toThrow('Missing slackToken');
 });
 
 // shows how the runner will run a javascript action with env / stdout protocol
