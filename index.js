@@ -1,7 +1,6 @@
 const core = require('@actions/core')
 const slackdown = require('./slackdown')
 
-
 // most @actions toolkit packages have async methods
 async function run() {
   try {

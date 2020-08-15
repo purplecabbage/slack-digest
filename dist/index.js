@@ -543,10 +543,11 @@ async function slackdown(slackToken) {
       })
     }
   }))
-//   const now = new Date()
-//   const month = now.getMonth() + 1
-//   const fileDateName = `${now.getFullYear()}-${month > 9 ? month : '0' + month}-${now.getDate()}.md`
-//   fs.writeFile(fileDateName, markdown.join('\n'))
+  
+  const now = new Date()
+  const month = now.getMonth() + 1
+  const fileDateName = `${now.getFullYear()}-${month > 9 ? month : '0' + month}-${now.getDate()}.md`
+  fs.writeFile(fileDateName, markdown.join('\n'))
   console.log('markdown=', markdown.join('\n'))
 }
 
@@ -1065,7 +1066,6 @@ module.exports = moveSync
 
 const core = __webpack_require__(470)
 const slackdown = __webpack_require__(37)
-
 
 // most @actions toolkit packages have async methods
 async function run() {
