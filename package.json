@@ -26,7 +26,7 @@
   "homepage": "https://github.com/purplecabbage/slack-digest#readme",
   "dependencies": {
     "@actions/core": "^1.1.1",
-    "@slack/web-api": "^5.10.0",
+    "@slack/web-api": "^6.2.3",
     "fs-extra": "^9.0.1",
     "node-emoji": "^1.10.0"
   },
