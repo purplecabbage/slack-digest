@@ -27,7 +27,7 @@
   "dependencies": {
     "@actions/core": "^1.1.1",
     "@slack/web-api": "^5.10.0",
-    "fs-extra": "^9.0.1",
+    "fs-extra": "^10.0.1",
     "node-emoji": "^1.10.0"
   },
   "devDependencies": {
