@@ -104,7 +104,8 @@ async function slackdown(slackToken) {
 
   const now = new Date()
   const month = now.getMonth() + 1
-  const fileDateName = `digest/${now.getFullYear()}-${month > 9 ? month : '0' + month}-${now.getDate()}.md`
+  let day = now.getDate()
+  const fileDateName = `digest/${now.getFullYear()}-${month > 9 ? month : '0' + month}-${day > 9 ? day : '0' + day}.md`
   fs.writeFile(fileDateName, markdown.join('\n'))
   console.log('markdown=', markdown.join('\n'))
 }
